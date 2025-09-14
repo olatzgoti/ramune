@@ -1,32 +1,103 @@
 *{
     background-color: rgb(231, 227, 235);
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
+html, body{
+    width:100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+@keyframes colorToStroke {
+    0% {
+        color: transparent;
+        -webkit-text-stroke: 1px #ee1280;
+    }
+    50% {
+        color: #ee1280;
+        -webkit-text-stroke: 1px #ee1280;
+    }
+    100% {
+        color: transparent;
+        -webkit-text-stroke: 1px #ee1280;
+    }
+}
 header{
+    position: fixed;
+    top:0;
+    width: 100%;
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
     align-items: center;
     text-align: end;
     border-bottom: 1px solid black;
-    border: 2px solid black;
+    height: 110px;
+    padding: 20px;
 }
+
 nav{
     display: flex;
     text-align: end;
 }
-.title
+
+a{    
+    text-decoration: none;
+}
+.title, .cta, .discover
 {
     padding-left: 4%;
     padding-right: 3%;
-
     font-size: 35px;
 }
-.var ul{
+.cta{
+    border: 1px solid black;
+    padding: 15px;
+    color: black;
+    transition: all 1s ease;
+    display:flex;
+    flex-direction: row;
+}
 
+.cta:hover{
+    background-color: #ee1280;
+    transition: all 1s ease;
+    p{
+        background-color: #ee1280;
+        transition: all 1s ease;
+    } 
+}
+.cta p{
+    transition: all 1s ease;
+}
+.cta:hover p {
+    background-color: #ee1280;
+    transition: all 1s ease;
+}
+
+
+div.body{    
+    position: relative;
+    top: 200px;
+    display: flex;
+    height: 50em;
+    min-height: 500px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.transp{
+    color: transparent;
+    -webkit-text-stroke: 2px black;
+  
+}
+
+.var ul{
     display:flex;
     flex-direction: row;
     align-items: safe;
-    
 }
 ul li{
     list-style: none;
@@ -34,24 +105,113 @@ ul li{
     font-size: 35px;
     color: transparent;
     -webkit-text-stroke: 1px black; /* Contorno negro */
-    transition: all 0.3s ease;
+    transition: all 1s ease;
 }
 li:hover{
-    color: #9f67c2;
+    color: #ee1280;
+    
+    -webkit-text-stroke: 1px #ee1280;
+    animation: colorToStroke 1s ease forwards;
 
 }
-div{
 
-    padding-left: 140px;
-
-}
 .oriental {
     font-family: 'Noto Sans JP', 'Yu Gothic', 'MS Mincho', 'SimHei', 'serif';
     font-variant-east-asian: traditional;
-    font-size: 200px;
+    font-size: 7em;
     letter-spacing: 0.5em;
     display: flex;
     flex-direction: column;
     text-align: center;
-    border: 2px solid red;
+    z-index: 1;
+}
+.media{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15em;
+}
+.main-figure{
+    width: 70%;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+article{
+    padding: 30px;
+}
+.main-figure img{
+ 
+    width: 100%;
+}
+.text-fake{
+
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: self-start;
+    width: 30%;
+    padding-left: 10%;
+    padding-bottom: 1em;
+    padding-top: 1em;
+}
+.text-fake img{
+    padding: 3%;
+}
+.discover-section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    justify-content: center;
+    background-color: black;
+}
+.discover{
+    background-color: black;
+    color:azure
+}
+.general-media{
+    width:100%;
+}
+.general-media img{
+    width: 100%;
+    height:100%;
+    object-fit: fill;
+}
+.text{
+    font-family: 'Noto Sans JP', 'Yu Gothic', 'MS Mincho', 'SimHei', 'serif';
+    font-variant-east-asian: traditional;
+    font-size: 3em;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
+    -webkit-text-stroke: 1px #f7e8e8;
+    letter-spacing: 0.3em;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    z-index: 2;
+    background-color: rgb(15, 14, 14);
+}
+
+.text-section{
+    background-color: aquamarine;
+}
+
+.discover-section img{
+    background-color: rgb(2, 2, 2);
+}
+.discover-section:hover{
+    background-color: #ee1280;
+
+    .discover{
+        background-color: #ee1280;
+        color: black;
+    }
+    img{
+        background-color: #ee1280;
+    }
 }
